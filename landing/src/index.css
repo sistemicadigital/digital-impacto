@@ -14,3 +14,30 @@
     margin: 0;
   }
 }
+
+@layer components {
+  /* Tipografía de las páginas legales, para no repetir clases en cada nodo. */
+  .legal h2 {
+    @apply mt-12 text-xl font-bold text-negro sm:text-2xl;
+  }
+
+  .legal h3 {
+    @apply mt-8 text-base font-bold text-negro;
+  }
+
+  .legal p {
+    @apply mt-4 leading-relaxed text-negro/75;
+  }
+
+  .legal ul {
+    @apply mt-4 list-disc space-y-2 pl-6 text-negro/75;
+  }
+
+  .legal li {
+    @apply leading-relaxed;
+  }
+
+  .legal a {
+    @apply font-semibold text-rojo underline underline-offset-4;
+  }
+}

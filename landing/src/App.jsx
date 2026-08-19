@@ -1,30 +1,23 @@
-import Hero from './components/Hero'
-import PropuestaValor from './components/PropuestaValor'
-import Servicios from './components/Servicios'
-import OfertaEstrella from './components/OfertaEstrella'
-import Equipo from './components/Equipo'
-import Diferenciadores from './components/Diferenciadores'
-import FormularioLeads from './components/FormularioLeads'
-import CtaFinal from './components/CtaFinal'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Landing from './pages/Landing'
+import TerminosCondiciones from './pages/TerminosCondiciones'
+import PoliticaPrivacidad from './pages/PoliticaPrivacidad'
+import PoliticaCookies from './pages/PoliticaCookies'
 import BotonWhatsApp from './components/BotonWhatsApp'
-import { useCalPopup } from './lib/cal'
+import BannerCookies from './components/BannerCookies'
 
 export default function App() {
-  useCalPopup()
-
   return (
-    <>
-      <main>
-        <Hero />
-        <PropuestaValor />
-        <Servicios />
-        <OfertaEstrella />
-        <Equipo />
-        <Diferenciadores />
-        <FormularioLeads />
-        <CtaFinal />
-      </main>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route path="/terminos-y-condiciones" element={<TerminosCondiciones />} />
+        <Route path="/politica-de-privacidad" element={<PoliticaPrivacidad />} />
+        <Route path="/politica-de-cookies" element={<PoliticaCookies />} />
+        <Route path="*" element={<Landing />} />
+      </Routes>
       <BotonWhatsApp />
-    </>
+      <BannerCookies />
+    </BrowserRouter>
   )
 }
