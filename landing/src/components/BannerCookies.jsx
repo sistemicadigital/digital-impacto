@@ -45,7 +45,7 @@ export default function BannerCookies() {
             <button
               type="button"
               onClick={aceptar}
-              className="shrink-0 rounded-full bg-rojo px-7 py-3 text-sm font-bold text-white transition-colors hover:bg-rojo/90 focus:outline-none focus-visible:ring-4 focus-visible:ring-rojo/40"
+              className="min-h-[48px] shrink-0 rounded-full bg-rojo px-8 text-sm font-bold text-white transition-colors hover:bg-rojo/90 focus:outline-none focus-visible:ring-4 focus-visible:ring-rojo/40"
             >
               Aceptar
             </button>

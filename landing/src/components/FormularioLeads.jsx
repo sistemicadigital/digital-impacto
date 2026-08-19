@@ -37,8 +37,9 @@ const ESTADO_INICIAL = {
   servicio: '',
 }
 
+// text-base fija 16px: por debajo de eso iOS hace zoom al enfocar el campo.
 const inputClass =
-  'w-full rounded-xl border border-negro/15 bg-white px-4 py-3 text-negro outline-none transition focus:border-rojo focus:ring-2 focus:ring-rojo/25'
+  'w-full rounded-xl border border-negro/15 bg-white px-4 py-3 text-base text-negro outline-none transition focus:border-rojo focus:ring-2 focus:ring-rojo/25'
 
 export default function FormularioLeads() {
   const [datos, setDatos] = useState(ESTADO_INICIAL)

@@ -11,6 +11,8 @@ export default function Hero() {
         muted
         loop
         playsInline
+        // metadata en vez de auto: no bloquea la primera pintura en movil
+        preload="metadata"
         aria-hidden="true"
       />
 

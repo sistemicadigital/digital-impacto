@@ -42,12 +42,13 @@ export default function Footer() {
             />
           </Link>
 
-          <nav className="flex flex-col items-center gap-3 sm:items-start">
+          {/* min-h-[48px] por enlace: area de toque comoda en movil */}
+          <nav className="flex flex-col items-center sm:items-start">
             {LEGALES.map((enlace) => (
               <Link
                 key={enlace.ruta}
                 to={enlace.ruta}
-                className="text-sm text-white/60 transition-colors hover:text-white"
+                className="flex min-h-[48px] items-center text-sm text-white/60 transition-colors hover:text-white"
               >
                 {enlace.texto}
               </Link>
@@ -62,7 +63,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={red.nombre}
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-rojo"
+                className="flex h-12 w-12 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-rojo"
               >
                 {red.icono}
               </a>

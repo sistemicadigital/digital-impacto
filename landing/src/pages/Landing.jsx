@@ -4,6 +4,8 @@ import Servicios from '../components/Servicios'
 import OfertaEstrella from '../components/OfertaEstrella'
 import Equipo from '../components/Equipo'
 import Diferenciadores from '../components/Diferenciadores'
+import Testimonios from '../components/Testimonios'
+import Faqs from '../components/Faqs'
 import FormularioLeads from '../components/FormularioLeads'
 import CtaFinal from '../components/CtaFinal'
 import Footer from '../components/Footer'
@@ -21,6 +23,8 @@ export default function Landing() {
         <OfertaEstrella />
         <Equipo />
         <Diferenciadores />
+        <Testimonios />
+        <Faqs />
         <FormularioLeads />
         <CtaFinal />
       </main>
