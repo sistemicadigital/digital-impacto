@@ -33,10 +33,8 @@ export default function Hero() {
         animate="visible"
         variants={{ visible: { transition: { staggerChildren: 0.15 } } }}
       >
-        <motion.img
-          src="/images/hero-showcase.jpg"
-          alt="Trabajos de Digital Impacto"
-          className="z-10 w-full max-w-[500px] rounded-2xl shadow-2xl"
+        <motion.picture
+          className="z-10 w-full max-w-[500px]"
           variants={{
             hidden: { opacity: 0, scale: 0.92 },
             visible: {
@@ -45,7 +43,16 @@ export default function Hero() {
               transition: { duration: 0.9, ease: [0.22, 1, 0.36, 1] },
             },
           }}
-        />
+        >
+          <source srcSet="/images/hero-showcase.webp" type="image/webp" />
+          <img
+            src="/images/hero-showcase.jpg"
+            alt="Trabajos de Digital Impacto"
+            width="1000"
+            height="400"
+            className="w-full rounded-2xl shadow-2xl"
+          />
+        </motion.picture>
 
         <div className="z-20 flex flex-col items-center">
           <motion.h1

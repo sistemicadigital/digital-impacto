@@ -11,13 +11,17 @@ export default function Equipo() {
         whileInView="visible"
         viewport={viewportOnce}
       >
-        <motion.img
-          src="/images/Equipo-digital-impacto.jpg"
-          alt="Equipo de Digital Impacto"
-          loading="lazy"
-          className="mx-auto w-full max-w-sm rounded-2xl shadow-2xl"
-          variants={fadeUp}
-        />
+        <motion.picture variants={fadeUp} className="mx-auto w-full max-w-sm">
+          <source srcSet="/images/Equipo-digital-impacto.webp" type="image/webp" />
+          <img
+            src="/images/Equipo-digital-impacto.jpg"
+            alt="Equipo de Digital Impacto"
+            width="768"
+            height="1153"
+            loading="lazy"
+            className="w-full rounded-2xl shadow-2xl"
+          />
+        </motion.picture>
 
         <div className="text-center md:text-left">
           <motion.h2
