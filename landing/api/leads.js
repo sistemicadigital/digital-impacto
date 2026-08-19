@@ -49,13 +49,16 @@ export default async function handler(request) {
       Authorization: `Token ${token}`,
       'Content-Type': 'application/json',
     },
+    // Las claves son los nombres de columna exactos en Baserow.
     body: JSON.stringify({
       Nombre: datos.nombre,
       Telefono: datos.telefono,
-      Negocio: datos.negocio,
-      Ciudad: datos.ciudad,
-      Email: datos.email,
-      Servicio: datos.servicio,
+      Nombre_Negocio_Prospecto: datos.negocio,
+      Ciudad_Prospecto: datos.ciudad,
+      Correo_Prospecto: datos.email,
+      Servicio_Interes: datos.servicio,
+      Tipo_de_negocio: datos.servicio,
+      Origen_Lead: 'Landing Web',
     }),
   })
 

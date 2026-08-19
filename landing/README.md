@@ -26,6 +26,21 @@ En producción se configura en Vercel: *Project Settings → Environment Variabl
 - **Meta Pixel** — ID `2289041488597112`, cargado en `index.html`. El envío del formulario dispara el evento `Lead`.
 - **Baserow** — el formulario hace `POST /api/leads`; la edge function reenvía a Baserow con el token del servidor.
 
+### Mapeo de campos a Baserow
+
+El formulario usa nombres cortos en español; `api/leads.js` los traduce a las
+columnas reales de la tabla `1119968`:
+
+| Campo del formulario | Columna en Baserow |
+| --- | --- |
+| `nombre` | `Nombre` |
+| `telefono` | `Telefono` |
+| `negocio` | `Nombre_Negocio_Prospecto` |
+| `ciudad` | `Ciudad_Prospecto` |
+| `email` | `Correo_Prospecto` |
+| `servicio` | `Servicio_Interes` y `Tipo_de_negocio` |
+| — | `Origen_Lead`, fijo en `"Landing Web"` |
+
 ## Assets
 
 - `public/logo.jpeg` — logo de la marca.
